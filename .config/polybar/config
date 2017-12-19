@@ -1,0 +1,147 @@
+;=====================================================
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/jaagr/polybar
+;
+;   The README contains alot of information
+;
+;=====================================================
+
+[colors]
+transparent = #00000000
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
+black = ${xrdb:color0}
+dgrey = ${xrdb:color8} 
+dred = ${xrdb:color1}
+red = ${xrdb:color9}
+dgreen = ${xrdb:color2}
+green = ${xrdb:color10}
+dyellow = ${xrdb:color3}
+yellow = ${xrdb:color11}
+dblue = ${xrdb:color4}
+blue = ${xrdb:color12}
+dmagenta = ${xrdb:color5}
+magenta = ${xrdb:color13}
+dcyan = ${xrdb:color6}
+cyan = ${xrdb:color14}
+lgrey = ${xrdb:color7}
+white = ${xrdb:color15}
+
+tblack = #502f343f
+tred = #50fb4934
+tgreen = #50b8bb26
+tyellow = #50fabd2f
+tblue = #5083a598
+tmagenta = #50d3869b
+tcyan = #508ec07c
+twhite = #50ebdbb2
+tgrey = #50a89984
+
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+[bar/top]
+width = 100%
+height = 28
+offset-x = 0
+offset-y = 0
+locale = pl_PL.UTF-8
+
+background = ${colors.background}
+foreground = ${colors.white}
+
+font-0 = Inconsolata:size=9:weight=Regular
+font-1 = FontAwesome:size=10;0
+font-2 = Inconsolata:size=10:weight=bold
+font-3 = Inconsolata:size=10:weight=Regular
+
+modules-left = i3 
+modules-center = 
+modules-right = eth volume date
+
+tray-position = right
+tray-background = ${colors.background}
+tray-transparent = false
+tray-offset-x = 0
+tray-detached = true
+
+underline-size = 3
+overline-size = 3
+
+spacing = 1
+padding-left = 0
+padding-right = 0
+module-margin-left = 1 
+module-margin-right = 1
+
+fixed-center = true
+
+[module/i3]
+type = internal/i3
+strip-wsnumbers = true
+
+format = <label-state> <label-mode>
+
+label-mode-foreground = ${colors.background}
+label-mode-background = ${colors.dgreen}
+label-mode-padding = 1
+
+label-focused-padding = 1
+label-focused-font = 3
+
+label-unfocused-padding = 1
+label-unfocused-font = 4
+
+label-urgent-foreground = ${colors.dred}
+label-urgent-padding = 1
+label-urgent-font = 3
+
+label-visible-foreground = ${colors.dgreen}
+label-visible-padding = 1
+label-visible-font = 3
+
+[module/eth]
+type = internal/network
+interface = enp3s0
+interval = 3.0
+
+; Don't show it if disconnected
+format-disconnected =
+format-connected-prefix-background = ${colors.background}
+label-connected-background = ${colors.background}
+label-connected = " %local_ip% "
+
+[module/volume]
+type = internal/volume
+format-volume = <ramp-volume> <label-volume>
+master-mixer = Master
+label-muted =  muted
+ 
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+mapping = true
+
+[module/date]
+type = internal/date
+interval = 1.0
+date = %Y-%m-%d%
+time = %H:%M
+
+date-alt = %A%, %d %B %Y
+time-alt = %H:%M:%S
+
+format = 🕓 <label>
+format-background = ${colors.background} 
+format-foreground = ${colors.foreground}
+format-padding = 2
+
+label = %date% %time%
+label-foreground = ${colors.white}
+
+[settings]
+screenchange-reload = true
+; vim:ft=dosini
