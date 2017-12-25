@@ -13,23 +13,14 @@ rofi.drun-icon-theme: 	Papirus
 rofi.show-icons: 	true
 rofi.modi: 		window,run,ssh,drun
 
-! rofi colors
-
-rofi.color-enabled: true
-rofi.color-window: #2f343f, #2f343f, #268bd2
-rofi.color-normal: #2f343f, #ffffff, #2f343f, #268bd2, #ffffff
-rofi.color-active: #2f343f, #268bd2, #2f343f, #268bd2, #205171
-rofi.color-urgent: #2f343f, #f3843d, #2f343f, #268bd2, #ffc39c
-
 ! general options
 URxvt.internalBorder: 30
 URxvt.tintColor: white
 URxvt.inheritPixmap: false
-URxvt*depth: 32
 
 ! font
 URxvt*font:     xft:Inconsolata:medium:size=11
-xterm*faceName: xft:Inconsolata:medium:size=11
+xterm*faceName: xtf:Inconsolata:medium:size=11
 Xft.dpi: 96
 
 ! scrollbar
@@ -60,42 +51,3 @@ URxvt.secondaryScroll: 0
 ! fullscreen exetension
 URxvt.perl-ext-common: fullscreen
 URxvt.keysym.F11: perl:fullscreen:switch
-
-! special
-*.foreground:   #c5c8c6
-*.background:   #1d1f21
-*.cursorColor:  #c5c8c6
-
-! black
-*.color0:       #1d1f21
-*.color8:       #969896
-
-! red
-*.color1:       #cc342b
-*.color9:       #cc342b
-
-! green
-*.color2:       #198844
-*.color10:      #198844
-
-! yellow
-*.color3:       #fba922
-*.color11:      #fba922
-
-! blue
-*.color4:       #3971ed
-*.color12:      #3971ed
-
-! magenta
-*.color5:       #a36ac7
-*.color13:      #a36ac7
-
-! cyan
-*.color6:       #3971ed
-*.color14:      #3971ed
-
-! white
-*.color7:       #c5c8c6
-*.color15:      #ffffff
-
-

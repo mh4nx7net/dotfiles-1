@@ -9,35 +9,17 @@
 
 [colors]
 transparent = #00000000
-background = ${xrdb:background}
-foreground = ${xrdb:foreground}
-black = ${xrdb:color0}
-dgrey = ${xrdb:color8} 
-dred = ${xrdb:color1}
-red = ${xrdb:color9}
-dgreen = ${xrdb:color2}
-green = ${xrdb:color10}
-dyellow = ${xrdb:color3}
-yellow = ${xrdb:color11}
-dblue = ${xrdb:color4}
-blue = ${xrdb:color12}
-dmagenta = ${xrdb:color5}
-magenta = ${xrdb:color13}
-dcyan = ${xrdb:color6}
-cyan = ${xrdb:color14}
-lgrey = ${xrdb:color7}
-white = ${xrdb:color15}
+background = ${xrdb:color0}
 
-tblack = #502f343f
-tred = #50fb4934
-tgreen = #50b8bb26
-tyellow = #50fabd2f
-tblue = #5083a598
-tmagenta = #50d3869b
-tcyan = #508ec07c
-twhite = #50ebdbb2
-tgrey = #50a89984
-
+black = #502f343f
+red = #50fb4934
+green = #50b8bb26
+yellow = #50fabd2f
+blue = #5083a598
+magenta = #50d3869b
+cyan = #508ec07c
+white = #fff
+grey = #50a89984
 
 [global/wm]
 margin-top = 5
@@ -62,18 +44,12 @@ modules-left = i3
 modules-center = 
 modules-right = eth volume date
 
-tray-position = right
-tray-background = ${colors.background}
-tray-transparent = false
-tray-offset-x = 0
-tray-detached = true
-
 underline-size = 3
 overline-size = 3
 
 spacing = 1
 padding-left = 0
-padding-right = 0
+padding-right = 0 
 module-margin-left = 1 
 module-margin-right = 1
 
@@ -85,8 +61,6 @@ strip-wsnumbers = true
 
 format = <label-state> <label-mode>
 
-label-mode-foreground = ${colors.background}
-label-mode-background = ${colors.dgreen}
 label-mode-padding = 1
 
 label-focused-padding = 1
@@ -95,11 +69,11 @@ label-focused-font = 3
 label-unfocused-padding = 1
 label-unfocused-font = 4
 
-label-urgent-foreground = ${colors.dred}
+label-urgent-foreground = ${colors.red}
 label-urgent-padding = 1
 label-urgent-font = 3
 
-label-visible-foreground = ${colors.dgreen}
+label-visible-foreground = ${colors.green}
 label-visible-padding = 1
 label-visible-font = 3
 
@@ -136,7 +110,6 @@ time-alt = %H:%M:%S
 
 format = 🕓 <label>
 format-background = ${colors.background} 
-format-foreground = ${colors.foreground}
 format-padding = 2
 
 label = %date% %time%
