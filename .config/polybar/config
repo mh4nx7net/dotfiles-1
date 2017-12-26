@@ -41,7 +41,7 @@ font-2 = Inconsolata:size=10:weight=bold
 font-3 = Inconsolata:size=10:weight=Regular
 
 modules-left = i3 
-modules-center = 
+modules-center = cmus
 modules-right = eth volume date
 
 underline-size = 3
@@ -76,6 +76,16 @@ label-urgent-font = 3
 label-visible-foreground = ${colors.green}
 label-visible-padding = 1
 label-visible-font = 3
+
+[module/cmus]
+type = custom/script
+
+exec = sh ~/.config/polybar/cmus.sh
+exec-if = pgrep -x cmus
+interval = 1
+
+click-left = cmus-remote --pause
+click-right = cmus-remote --stop
 
 [module/eth]
 type = internal/network

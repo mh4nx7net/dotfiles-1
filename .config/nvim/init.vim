@@ -1,7 +1,6 @@
 " colorscheme
 colorscheme wal
 
-
 " fuck swapfiles
 set noswapfile
 set backupdir=~/.config/nvim/tmp/backups/
@@ -12,6 +11,18 @@ call plug#begin('~/.config/neovim/plugged')
 
 Plug 'junegunn/goyo.vim'
 
-" Initialize plugin system
 call plug#end()
 
+" Auto Commands {{{
+
+
+augroup General
+    au!
+
+    " Always enable Goyo.
+    autocmd BufReadPost * Goyo
+
+augroup END
+
+
+" }}}

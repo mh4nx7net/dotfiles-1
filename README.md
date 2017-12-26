@@ -13,8 +13,9 @@ My small dotfiles, that are used to personalize my `i3-gaps` system. I'm using [
 - Application Launcher `rofi`
 - Bar `polybar`
 - Text Editor `neovim` and `atom`
+- Music player `cmus`
 
 ## Additional software
 - Music Visualizer `cava`
 - CLI System information Tool `neofetch`
-- Lockscreen [`betterlockscreen`](https://github.com/pavanjadhaw/betterlockscreen)
+- Lockscreen `betterlockscreen` 
