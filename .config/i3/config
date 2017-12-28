@@ -162,7 +162,7 @@ bindsym XF86AudioLowerVolume exec --no-startup-id "/home/w3ndige/projects/dotfil
 bindsym XF86AudioMute exec --no-startup-id "vol mute &"
 
 # startup 
-exec_always --no-startup-id "/home/w3ndige/projects/dotfiles/scripts/polybar.sh &" 
-exec --no-startup-id "/home/w3ndige/projects/dotfiles/scripts/lock.sh -u $(< '/home/w3ndige/.cache/wal/wal')"
+exec_always --no-startup-id "/home/w3ndige/projects/dotfiles/scripts/polybar.sh" 
+exec_always --no-startup-id "/home/w3ndige/projects/dotfiles/scripts/lock.sh -u $(< '/home/w3ndige/.cache/wal/wal')"
 exec --no-startup-id wal -i "$(< "${HOME}/.cache/wal/wal")"
 exec --no-startup-id compton -f

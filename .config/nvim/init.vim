@@ -1,6 +1,16 @@
 " colorscheme
 colorscheme wal
 
+set number
+syntax enable
+
+" 4 spaces instead of tabs
+set expandtab
+set smarttab
+
+set shiftwidth=4
+set tabstop=4
+
 " fuck swapfiles
 set noswapfile
 set backupdir=~/.config/nvim/tmp/backups/
@@ -13,16 +23,4 @@ Plug 'junegunn/goyo.vim'
 
 call plug#end()
 
-" Auto Commands {{{
 
-
-augroup General
-    au!
-
-    " Always enable Goyo.
-    autocmd BufReadPost * Goyo
-
-augroup END
-
-
-" }}}
